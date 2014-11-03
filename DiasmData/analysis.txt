@@ -1,0 +1,67 @@
+MOV 系列
+0B78:0100 8B165811      MOV     DX,[1158]	   ；直接寻址			注意单字节、双字节
+0B78:010B 8946FA        MOV     [BP-06],AX     ；寄存器相对寻址     注意补码
+0B78:010E 8B4604        MOV     AX,[BP+04]
+0B78:0111 8B5606        MOV     DX,[BP+06]
+0B78:011C 8B4604        MOV     AX,[BP+04]
+0B78:011F 8B5606        MOV     DX,[BP+06]
+0B78:012A 8A4608        MOV     AL,[BP+08]
+0B78:0130 8B4604        MOV     AX,[BP+04]
+0B78:0133 8B5606        MOV     DX,[BP+06]
+0B78:0141 8B4604        MOV     AX,[BP+04]
+0B78:0144 8B5606        MOV     DX,[BP+06]
+0B78:014F 8B4604        MOV     AX,[BP+04]
+0B78:0152 8B5606        MOV     DX,[BP+06]
+0B78:0163 8A07          MOV     AL,[BX]		  ；寄存器间接寻址
+0B78:0172 8A07          MOV     AL,[BX]
+0B78:017E 8A4701        MOV     AL,[BX+01]
+
+AND系列
+0B78:0104 250F00        AND     AX,000F		  ；与下面DX的比对，猜测应该是对AX进行了特殊处理
+0B78:0107 81E20000      AND     DX,0000
+0B78:0165 25FF00        AND     AX,00FF
+0B78:0174 25FF00        AND     AX,00FF
+0B78:0181 25FF00        AND     AX,00FF
+
+ADD系列：
+0B78:0114 01065611      ADD     [1156],AX
+0B78:0137 00FF          ADD     BH,BH
+0B78:013C 0200          ADD     AL,[BX+SI]
+0B78:013E 005657        ADD     [BP+57],DL
+0B78:0155 01065E11      ADD     [115E],AX
+0B78:016B 0146FC        ADD     [BP-04],AX
+
+ADC系列：
+0B78:0118 11165811      ADC     [1158],DX
+0B78:0159 11166011      ADC     [1160],DX
+
+SUB系列：
+0B78:0122 29065E11      SUB     [115E],AX
+0B78:0147 29065611      SUB     [1156],AX
+
+SBB系列：
+0B78:0126 19166011      SBB     [1160],DX
+0B78:014B 19165811      SBB     [1158],DX
+
+CMP系列：
+0B78:012D 3D0000        CMP     AX,0000
+0B78:0168 3D3D00        CMP     AX,003D
+0B78:0177 3D4300        CMP     AX,0043
+0B78:0184 3D4F00        CMP     AX,004F
+
+PUSH系列：
+0B78:0136 50            PUSH    AX
+0B78:0139 FF76FA        PUSH    [BP-06]
+
+POP系列：
+0B78:015D 5F            POP     DI
+0B78:015E 5E            POP     SI
+
+LES系列：
+0B78:015F C45ED6        LES     BX,[BP-2A]
+0B78:016E C45ED6        LES     BX,[BP-2A]
+0B78:017A C45ED6        LES     BX,[BP-2A]
+
+段跨越前缀系列：
+0B78:0162 26            ES:
+
