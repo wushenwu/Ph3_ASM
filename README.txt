@@ -8,3 +8,5 @@ Notes for my ASM learning
 20141031_ASM_指令.doc
 20141103_ASM_ADD_SUB指令.doc 
 20141104_ASM_位操作_串操作.doc
+20141105_ASM_Jxx_LOOP.doc
+20141106_ASM_CALL.doc
