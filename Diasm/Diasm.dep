@@ -1,0 +1,22 @@
+# Microsoft Developer Studio Generated Dependency File, included by Diasm.mak
+
+.\Diasm.cpp : \
+	".\Diasm.h"\
+	".\DiasmDlg.h"\
+	".\StdAfx.h"\
+	
+
+.\Diasm.rc : \
+	".\res\Diasm.ico"\
+	".\res\Diasm.rc2"\
+	
+
+.\DiasmDlg.cpp : \
+	".\Diasm.h"\
+	".\DiasmDlg.h"\
+	".\StdAfx.h"\
+	
+
+.\StdAfx.cpp : \
+	".\StdAfx.h"\
+	
